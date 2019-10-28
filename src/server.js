@@ -11,7 +11,9 @@ app.use(cors());
 const server = require('http').Server(app);
 const io = require('socket.io')(server)
 
-const url = 'mongodb+srv://omnistack:omnistack@cluster0-qkf5f.mongodb.net/test?retryWrites=true&w=majority';
+// Configurar mongodb, quando for usar novamente
+
+const url = '';
 const options = { reconnectTries: Number.MAX_VALUE, reconnectInterval: 500, poolSize: 5, useNewUrlParser: true,  useUnifiedTopology: true};
 
 io.on('connection', socket => {
